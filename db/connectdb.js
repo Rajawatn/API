@@ -4,7 +4,7 @@ const connectDb = () => {
     return mongoose.connect(process.env.LIVE_URL)
         .then(() => {
             console.log("connected successfully")
-        }).catch(() => {
+        }).catch((error) => {
             console.log(error)
         })
 }
